@@ -1,4 +1,29 @@
-/* Ejemplo 1 */
+  /* EJemplo 1 */
+  
+  const saludar = (nombre, edad) => {
+	console.log(`Hola ${nombre} tu edad es de ${edad} años`);
+};
+// Llama a saludar y pasarle argumentos
+setTimeout(saludar, 2000, "Janer", 18);
+
+const saludar2 = saludar.valueOf();
+console.log(saludar)
+
+
+  /* Ejemplo 2 */
+  let userID = (id,callback) => { // parametros id y callback 
+    user = {                      // el callback es ejecutado internamente en la función userID
+        name: "Janer", id 
+    };
+    callback(user) // el callback es llamado como parametro cuando se usa userID
+  }
+  userID(1,(user)=>{
+    console.log("usuario",user);
+  });
+
+  console.log(userID.length);
+
+/* Ejemplo 3 */
 
 const doTask = (iteracion, callback) => { // iteracion indica los numeros de los lanzamientos 
     const numbers = [];
@@ -29,22 +54,4 @@ const doTask = (iteracion, callback) => { // iteracion indica los numeros de los
     console.log("Tiradas correctas: ", result.value);
   });
 
-  /* Ejemplo 2 */
-  let userID = (id,callback) => { // parametros id y callback 
-    user = {                      // el callback es ejecutado internamente en la función userID
-        name: "Janer", id 
-    };
-    callback(user) // el callback es llamado como parametro cuando se usa userID
-  }
-  userID(1,(user)=>{
-    console.log("usuario",user);
-  });
 
-  console.log(userID.length);
-
-  /* EJemplo 3 */
-  const saludar = (nombre, edad) => {
-	console.log(`Hola ${nombre} tu edad es de ${edad}`);
-};
-// Llama a saludar y pasarle argumentos
-setTimeout(saludar, 3000, "Janer", 18);
