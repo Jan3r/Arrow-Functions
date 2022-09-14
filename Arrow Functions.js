@@ -7,7 +7,7 @@
 setTimeout(saludar, 2000, "Janer", 18);
 
 const saludar2 = saludar.valueOf();
-console.log(saludar)
+console.log(saludar2)
 
 
   /* Ejemplo 2 */
