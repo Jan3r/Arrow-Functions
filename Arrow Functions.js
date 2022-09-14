@@ -2,12 +2,13 @@
   
   const saludar = (nombre, edad) => {
 	console.log(`Hola ${nombre} tu edad es de ${edad} años`);
+	  const saludar2 = saludar.valueOf();
+console.log(saludar2)
 };
 // Llama a saludar y pasarle argumentos
 setTimeout(saludar, 2000, "Janer", 18);
 
-const saludar2 = saludar.valueOf();
-console.log(saludar2)
+
 
 
   /* Ejemplo 2 */
