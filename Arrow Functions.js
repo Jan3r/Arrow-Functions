@@ -19,9 +19,10 @@ console.log(saludar2)
   }
   userID(1,(user)=>{
     console.log("usuario",user);
+ console.log(userID.length);
   });
 
-  console.log(userID.length);
+ 
 
 /* Ejemplo 3 */
 
