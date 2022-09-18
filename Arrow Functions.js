@@ -1,33 +1,42 @@
-  /* EJemplo 1 */
-  
-  const saludar = (nombre, edad) => {
-	console.log(`Hola ${nombre} tu edad es de ${edad} años`);
-	  const saludar2 = saludar.valueOf();
-console.log(saludar2)
-};
-// Llama a saludar y pasarle argumentos
-setTimeout(saludar, 2000, "Janer", 18);
+/* Ejemplo 1 */
 
+const Alcuadrado = (num) => num*num;
 
+  const cuadrado = (callback,arreglo)=>{
+    const arregloM = arreglo.forEach(element => {
+      return callback(element);
+    });
 
+    return arregloM
+  }
+
+  let array = [5, 8, 9, 2];
+  cuadrado(Alcuadrado,array);
 
   /* Ejemplo 2 */
-  let userID = (id,callback) => { // parametros id y callback 
-    user = {                      // el callback es ejecutado internamente en la función userID
-        name: "Janer", id 
-    };
-    callback(user) // el callback es llamado como parametro cuando se usa userID
+
+  function filter(numeross, callback) {
+    let results = [];
+    for (const numeros of numeross) {
+      if (callback(numeros)) {
+        results.push(numeros);
+      }
+    }
+    return results;
   }
-  userID(1,(user)=>{
-    console.log("usuario",user);
- console.log(userID.length);
+  
+  let numeross = [1, 2, 4, 7, 3, 5, 6];
+  
+  let oddNumeros = filter(numeross, function (numeros) {
+    return numeros % 2 != 0;
   });
+  
+  console.log(oddNumeros);
 
- 
 
-/* Ejemplo 3 */
+  /* EJemplo 3 */
 
-const doTask = (iteracion, callback) => { // iteracion indica los numeros de los lanzamientos 
+  const doTask = (iteracion, callback) => { // iteracion indica los numeros de los lanzamientos 
     const numbers = [];
     for (let i = 0; i < iteracion; i++) {
       const number = 1 + Math.floor(Math.random() * 6);
@@ -55,5 +64,3 @@ const doTask = (iteracion, callback) => { // iteracion indica los numeros de los
     }
     console.log("Tiradas correctas: ", result.value);
   });
-
-
